@@ -7,6 +7,7 @@ function Event({ event }) {
     <span>
       <strong>
       {event.title}
+      hello there
       </strong>
       { event.desc && (':  ' + event.desc)}
     </span>
@@ -15,8 +16,8 @@ function Event({ event }) {
 
 function EventAgenda({ event }) {
   return <span>
-    <em style={{ color: 'magenta'}}>{event.title}</em>
-    <p>{ event.desc }</p>
+    <em style={{ color: 'magenta'}}>{event.title}testing</em>
+    <p>{ event.desc }hello</p>
   </span>
 }
 
@@ -28,7 +29,7 @@ let Rendering = React.createClass({
         <BigCalendar
           events={events}
           defaultDate={new Date(2015, 3, 1)}
-          defaultView='agenda'
+          defaultView='week'
           components={{
             event: Event,
             agenda: {
